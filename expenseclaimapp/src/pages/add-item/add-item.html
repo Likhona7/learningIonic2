@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Add Expense
+    </ion-title>
+    <ion-buttons end>
+      <button ion-buuton icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Date</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY"[(ngModel)]="date">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Team member</ion-label>
+      <ion-input type=text [(ngModel)]="team_member"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-input type=text [(ngModel)]="description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Amount</ion-label>
+      <ion-input type=number [(ngModel)]="amount"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="saveItem(date, team_member, description, amount)">Save</button>
+</ion-content>
