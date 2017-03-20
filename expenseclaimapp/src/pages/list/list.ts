@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-//import { AddItemPage } from '../add-item/add-item';
-//import { ItemDetailPage } from '../item-detail/item-detail';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
@@ -22,21 +20,21 @@ export class ListPage {
 
   }
 
-  totalAmount(): any {
+//  totalAmount(): any {
 
-    let total: number = 0;
+//    let total: number = 0;
 
-  let listOFAmount: any = this.items;
+//  let listOFAmount: any = this.items;
 
-    listOFAmount.forEach(function(i: any): any {
+//    listOFAmount.forEach(function(i: any): any {
 
-    total += i.amount;
+//    total += i.amount;
 
-    return total;
+//    return total;
 
-  })
+//  })
 
-  }
+//  }
 
 
 

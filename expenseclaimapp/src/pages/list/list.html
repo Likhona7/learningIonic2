@@ -1,27 +1,22 @@
 <ion-header>
   <ion-navbar  color="secondary">
-    <ion-title >
-      List Page
-
-      <img alt="logo" height="40"   src="/images1/logo_full.png" center>
-
+    <ion-title>
+      <img src="assets/img/logo_black.png"  alt="logo" height="40" start>
     </ion-title>
-
-
-
 <ion-buttons end>
-<button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+<button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle" style="color: black"></ion-icon></button>
 </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
 
 <ion-card text-center>
+
   <ion-card-header>
      Total Expense
   </ion-card-header>
   <ion-card-content *ngFor="let item of items | async">
-<strong>R{{ item }}</strong>
+<strong>R{{ item.amount }}</strong>
   </ion-card-content>
 </ion-card>
 
