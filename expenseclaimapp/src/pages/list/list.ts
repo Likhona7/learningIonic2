@@ -22,6 +22,24 @@ export class ListPage {
 
   }
 
+  totalAmount(): any {
+
+    let total: number = 0;
+
+  let listOFAmount: any = this.items;
+
+    listOFAmount.forEach(function(i: any): any {
+
+    total += i.amount;
+
+    return total;
+
+  })
+
+  }
+
+
+
   addItem(): void {
 
     let prompt = this.alertCtrl.create({
