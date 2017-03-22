@@ -1,25 +1,16 @@
 <ion-header>
-  <ion-navbar  color="secondary">
+  <ion-navbar color="secondary">
     <ion-title>
-      <img src="assets/img/logo_black.png"  alt="logo" height="40" start>
+      Expenses
+      <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle" style="color: black"></ion-icon></button>
+      </ion-buttons>
     </ion-title>
-<ion-buttons end>
-<button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle" style="color: black"></ion-icon></button>
-</ion-buttons>
   </ion-navbar>
 </ion-header>
+
+
 <ion-content padding>
-
-<ion-card text-center>
-
-  <ion-card-header>
-     Total Expense
-  </ion-card-header>
-  <ion-card-content *ngFor="let item of items | async">
-<strong>R{{ item.amount }}</strong>
-  </ion-card-content>
-</ion-card>
-
     <ion-list>
       <ion-item-sliding *ngFor="let item of items | async">
       <ion-item>
@@ -27,20 +18,38 @@
         <p class="lee">Amount Spent: <strong>R{{item.amount}}</strong></p>
         <p>Which Date: <strong>{{item.date}}</strong></p>
         <p>Describe Event: <strong>{{item.description}}</strong></p>
-
       </ion-item>
       <ion-item-options side="right">
 <button ion-button color="secondary" (click)="editMember(item)">
   <ion-icon name="md-create">Edit</ion-icon>
 </button>
       </ion-item-options>
-
       <ion-item-options side="left">
 <button ion-button color="danger" (click)="deleteMember(item.$key)">
   <ion-icon name="md-trash">Delete</ion-icon>
 </button>
       </ion-item-options>
-
     </ion-item-sliding>
    </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-navbar>
+
+  <ion-toolbar>
+    <ion-card text-center>
+      <ion-card-header>
+         Total Expense
+      </ion-card-header>
+      <ion-card-content>
+    <strong>R3500</strong>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-title>
+      <img src="assets/img/logo_full.png"  alt="logo" height="28" start>
+     </ion-title>
+  </ion-toolbar>
+
+</ion-navbar>
+</ion-footer>

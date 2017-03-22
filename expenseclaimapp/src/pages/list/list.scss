@@ -1,6 +1,20 @@
 page-home {
 
 }
+.bottom_bar {
+    position: fixed;
+    bottom: 2vh;
+    width: 100%;
+}
+navbar-md-height {
+  height: 40px;
+}
+
+.header {
+  background-color: #ededed;
+
+}
+
 
 .title-image {
     margin-top: 1px;
@@ -10,4 +24,6 @@ page-home {
 
 .icon-name {
   color: black;
+  margin-bottom: 10px;
+
 }
